@@ -1,0 +1,73 @@
+{% extends "wedding/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="welcome-container">
+    <img src="{% static 'wedding/images/homepage.jpg' %}" alt="wedding in field" class="background-img" loading="lazy">
+    <div class="overlay-text">
+        CC Photography
+    </div>
+</div>
+
+<div class="content-block1">
+    <div class="image-container">
+        <img class="homepage-img" src="{% static 'wedding/images/image10.jpg' %}" alt="Bride on Wedding Day" loading="lazy">
+    </div>
+    <div class="bio-block">
+        <div class="content-text">
+            <h2>Meet Clar, your new photography BFF!</h2>
+            <p>I'm not your ordinary click-click gal! Why? Because I don’t just take photos. I bring the VIBE! Those giggles, those secret glances, and yes, even those clumsy, cute 'oops' moments – I'm here for ALL of it. Let’s turn that 'awkward' into 'AWWW-dorable'! 
+            </p>
+            <p>But wait, there’s more! While some might see a sunset, I see the golden opportunity for that show-stopping, heart-melting silhouette shot. Rainy day? More like the perfect scene for a cinematic, umbrella-twirling dance. Every setting, every moment, and every little detail – I'm on the lookout to capture the raw, unfiltered magic that tells YOUR story.</p>
+            <p>Get ready, lovebirds, because with every snap, I promise a wild ride filled with laughter, love, and maybe a few surprises!</p>
+      
+        </div>
+    </div>
+</div>
+
+<div class="content-block2">
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="{% static 'wedding/images/image1.jpg' %}" alt="Gallery Image" loading="lazy">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'wedding/images/image4.webp' %}" alt="Gallery Image" loading="lazy">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'wedding/images/image5.jpg' %}" alt="Gallery Image" loading="lazy">
+        </div>
+    </div>
+</div>
+
+<div class="package-intro">
+    <h2>Packages</h2>
+    <p>Whether you're tying the knot nearby, globetrotting, or just showing off that sparkler, we've got the perfect package waiting for you:</p>
+    
+    <ul class="package-list">
+        <div>🌹<strong style="font-size: 20px;">Local Love Affair</strong>: Where home is where the heart (and the camera) is.</div>
+        <div>✈️ <strong style="font-size: 20px;">Jet Setters Dream</strong>: Love knows no borders, and neither do we!</div>
+        <div>🎉 <strong style="font-size: 20px;">Oh-so-engaged Extravaganza</strong>: Let's pop the champagne early!</div>
+    </ul>
+    <button style=" color: white; background-color: grey; border: white; border-radius: 20px; padding: 10px; margin-top: 20px;" class="details-btn"><a style="color: white;" href="{% url 'packages' %}">Unwrap the Details</a></button>
+</div>
+
+
+<div class="review-container">
+    <h2>Reviews</h2>
+    <div class="reviews">
+        <p style="font-family: Sofia, Brush Script MT, cursive;">"We knew we were in for something special when we stumbled upon Clar's website, but we had no idea just how magical our experience would be. Claire captured our love story in ways words can't express. Every click, every pose, and every moment felt so genuine. Her energy and passion are infectious! We're forever grateful."</p>
+        <p style="font-family: Sofia, Brush Script MT, cursive;">"From our very first interaction, Clar made us feel like the only couple in the world. Her incredible attention to detail, combined with her playful approach, made our photography session so memorable. Our photos are more than just images; they're timeless memories. Thank you, Clar!"</p>
+        <p style="font-family: Sofia, Brush Script MT, cursive;">"We chose the 'Oh-so-engaged Extravaganza', and WOW, Clar did not disappoint! She brought out the joy, the playfulness, and the deep connection we share. The photos are vibrant, dynamic, and filled with love. Highly recommend!"    </p>
+    </div>
+</div>
+
+
+
+<div class="content-block2">
+    <h2>Cue the fireworks, pop the confetti, and let’s get this party started. Here’s to making memories with you and your sweetheart!
+    </h2>
+    <button class="book-button" type="button"><a style="color: white;" href="{% url 'appointment' %}">Book Now</a></button>
+</div>
+
+{% endblock %}

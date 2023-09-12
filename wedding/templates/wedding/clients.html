@@ -1,0 +1,43 @@
+{% extends "wedding/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    {% if user.is_authenticated %}
+        <div class="container mt-5">
+            <h2>Clients</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th><a href="?sort=name">Name</a></th>
+                        <th><a href="?sort=email">Email</a></th>
+                        <th><a href="?sort=phone">Phone</a></th>
+                        <th><a href="?sort=package">Package</a></th>
+                        <th><a href="?sort=date_requested">Requested Date</a></th>
+                        <th><a href="?sort=approved">Approve</a></th>
+                        <th><a href="?sort=date_added">Date Added</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for client in clients %}
+                        <tr>
+                            <td><a href="{% url 'client' client.id %}">{{ client.name }}</a></td>
+                            <td>{{ client.email }}</td>
+                            <td>{{ client.phone }}</td>
+                            <td>{{ client.package }}</td>
+                            <td>{{ client.date_requested| date:"j/n/Y" }}</td>
+                            <td>{{ client.approved }}</td>
+                            <td>{{ client.date_added| date:"j/n/Y" }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div>
+            You are not authenticated
+        </div>
+
+    {% endif %}
+
+{% endblock %}

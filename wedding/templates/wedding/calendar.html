@@ -1,0 +1,40 @@
+{% extends "wedding/layout.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block body %}
+
+    <div class="calendar-page">
+        <div class="calendar-container">
+            <div id='calendar'></div>
+        </div>
+
+        <div id="book-event" class="event-form">
+            <form class="event-form" action="{% url 'calendar' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.title|add_class:"form-control" }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.description|add_class:"form-control" }}
+                </div>
+
+                <div class="form-group">
+                    {{ form.date|attr:"type:hidden" }}
+                </div>      
+                <strong><div style="margin: 20px;" id="current-date"></div></strong>          
+                <button id="create-event" type="submit" class="btn btn-primary">Submit</button>
+                <button id="close-book" type="submit" class="btn btn-primary">Close</button>
+            </form>
+        </div>
+
+        <div id="view-event" class="event-details">
+            <div class="title">Title: </div>
+            <div class="description">Description: </div>
+            <div class="date">Date: </div>
+            <button class="btn btn-primary" id="close-event">Close</button>
+        </div>
+    </div>
+
+{% endblock %}

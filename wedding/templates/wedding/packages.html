@@ -1,0 +1,29 @@
+{% extends "wedding/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="packages-page">
+
+    <h2>Packages</h2>
+    <div class="packages-intro">
+        <p>Alright, lovebirds, fasten your seatbelts! Whether you're dreaming of a hometown bash, an exotic destination wedding, or just capturing that twinkling pre-wedding love, I've got just the thing. Dive into my curated packages below, where there's a sprinkle of magic in every click. And remember, this isn’t just about photos - it's about weaving your unique love story into every pixel. Let’s make those Pinterest dreams an oh-so-glorious reality!</p>
+    </div>
+    <div class="packages-container">
+            {% for package in packages %}
+                <div class="packages">
+                    <div class="title" data-package-id="{{ package.id }}">{{ package.title|safe }}</div>
+                    <div class="description" data-package-id="{{ package.id }}">{{ package.description|safe }}</div>
+                    <div class="price" data-package-id="{{ package.id }}" style="margin-top:10px; margin-bottom: 10px;"><strong>Price:</strong> {{ package.price|safe }}</div>
+                    <div><strong>Deets:</strong></div>
+                    <div class="deets" data-package-id="{{ package.id }}">{{ package.deets|safe }}</div>
+                    {% if user.is_authenticated %}
+                        <button class="editBtn" data-package-id="{{ package.id }}" >Edit</button>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
