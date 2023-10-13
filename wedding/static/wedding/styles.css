@@ -3,14 +3,13 @@
     --text: grey;
     --headers: grey;
     --background: #F8EDEB;
-    --button: #FEC89A;
+    --button: #FCD5CE;
     --content-background: #FCD5CE;
     --nav: grey;
     --form: #D8E2DC;
 }
 
 body {
-    font-family: 'Raleway', sans-serif; 
     line-height: 1.6;
     background-color: var(--background); 
     color: #333333; 
@@ -24,7 +23,8 @@ body {
 }
 
 .nav-item {
-    color: white;
+    color: grey;
+    font-family: "Figtree",'Brush Script MT', cursive;
 }
 
 
@@ -47,16 +47,26 @@ body {
     transform: translate(-50%, -50%);
     color: white;
     font-size: 62px;
-    font-family: "Sofia",'Brush Script MT', cursive;
+    font-family: "Figtree",'Brush Script MT', cursive;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.bio-heading {
+    padding: 0;
+}
+
+.bio-subheading {
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-style: italic;
 }
 
 h2 {
     padding: 20px;
     text-align: center;
     color: var(--headers);
-    font-weight: 800;
-    font-family: "Sofia",'Brush Script MT', cursive;
+    font-weight: 500;
+    font-family: "Figtree",'Brush Script MT', cursive;
 }
 
 p {
@@ -106,17 +116,16 @@ p {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 20px;
     background-color: var(--button);
-    color: white;
-    font-weight: 800;
-    padding: 10px;
+    font-weight: 600;
+    padding: 15px;
     border: 2px solid var(--button);
+    border-radius: 25px;
     margin-bottom: 20px; 
 }
 
 .book-button:hover {
-    transform: translateX(-50%) scale(1.1); /* 10% larger on hover */
+    transform: translateX(-50%) scale(1.1); 
 }
 
 .package-intro {
@@ -228,12 +237,12 @@ p {
 }
 
 .request-form {
-    border-radius: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 150px;
     margin-right: 150px;
     padding: 40px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
     background-color: var(--form);
 }
 
@@ -244,6 +253,19 @@ textarea {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.form-submit-btn:hover {
+    background-color: lightgray;
+}
+
+.table-header, .client-link {
+    text-decoration: none;
+    color: black;
+}
+
+.table-header:hover, .client-link:hover {
+    color: grey;
 }
 
 .client-profile {

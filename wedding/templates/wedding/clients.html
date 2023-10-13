@@ -9,19 +9,19 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th><a href="?sort=name">Name</a></th>
-                        <th><a href="?sort=email">Email</a></th>
-                        <th><a href="?sort=phone">Phone</a></th>
-                        <th><a href="?sort=package">Package</a></th>
-                        <th><a href="?sort=date_requested">Requested Date</a></th>
-                        <th><a href="?sort=approved">Approve</a></th>
-                        <th><a href="?sort=date_added">Date Added</a></th>
+                        <th><a class="table-header" style="text-decoration: none;" href="?sort=name">Name</a></th>
+                        <th><a class="table-header" style="text-decoration: none;" href="?sort=email">Email</a></th>
+                        <th><a class="table-header" style="text-decoration: none;" href="?sort=phone">Phone</a></th>
+                        <th><a class="table-header" style="text-decoration: none;" href="?sort=package">Package</a></th>
+                        <th><a class="table-header" style="text-decoration: none;" href="?sort=date_requested">Requested Date</a></th>
+                        <th><a class="table-header" style="text-decoration: none;" href="?sort=approved">Approve</a></th>
+                        <th><a class="table-header" style="text-decoration: none;" href="?sort=date_added">Date Added</a></th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for client in clients %}
                         <tr>
-                            <td><a href="{% url 'client' client.id %}">{{ client.name }}</a></td>
+                            <td><a style="text-decoration: none;" class="client-link" href="{% url 'client' client.id %}">{{ client.name }}</a></td>
                             <td>{{ client.email }}</td>
                             <td>{{ client.phone }}</td>
                             <td>{{ client.package }}</td>

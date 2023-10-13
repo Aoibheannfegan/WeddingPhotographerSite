@@ -25,23 +25,23 @@
             <div>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a style="font-family: Sofia,Brush Script MT, cursive; font-size: 20px; color: white;" class="nav-link" href="{% url 'index' %}">CC Photography</a>
+                        <a style="font-family: Figtree,Brush Script MT, cursive; font-size: 20px; color: white;" class="nav-link" href="{% url 'index' %}">CC Photography</a>
                     </li>
                     <li class="nav-item">
-                        <a style="font-family: Sofia,Brush Script MT, cursive; font-size: 20px; color: white;" class="nav-link" href="{% url 'packages' %}">Packages</a>
+                        <a style="font-family: Figtree,Brush Script MT, cursive; font-size: 20px; color: white;" class="nav-link" href="{% url 'packages' %}">Packages</a>
                     </li>
                     <li class="nav-item">
-                        <a style="font-family: Sofia,Brush Script MT, cursive; font-size: 20px; color: white;" class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                        <a style="font-family: Figtree,Brush Script MT, cursive; font-size: 20px; color: white;" class="nav-link" href="{% url 'gallery' %}">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a style="font-family: Sofia,Brush Script MT, cursive; font-size: 20px; color: white;" class="nav-link" href="{% url 'appointment' %}">Book</a>
+                        <a style="font-family: Figtree,Brush Script MT, cursive; font-size: 20px; color: white;" class="nav-link" href="{% url 'appointment' %}">Book</a>
                     </li>
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'clients' %}">Clients</a>
+                            <a style="font-family: Figtree,Brush Script MT, cursive; font-size: 20px; color: #FCD5CE;" class="nav-link" href="{% url 'clients' %}">Clients</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'calendar' %}">Calendar</a>
+                            <a style="font-family: Figtree,Brush Script MT, cursive; font-size: 20px; color: #FCD5CE;" class="nav-link" href="{% url 'calendar' %}">Calendar</a>
                         </li>
                     {% endif %}
                 </ul>

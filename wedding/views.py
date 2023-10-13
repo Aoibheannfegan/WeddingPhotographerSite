@@ -10,10 +10,10 @@ from .models import User, Client, Calendar, Note, Package
 # Create your views here.
 
 class RequestForm(forms.Form):
-    name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Name'}), label="Name")
+    name = forms.CharField(required=True, widget=forms.TextInput(attrs={'placeholder': 'Name'}), label="Name")
     description = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Any additional details you want to add...'}), label = "Description")
-    email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder': 'Email'}), label="Email")
-    phone = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Phone'}), label="Phone")
+    email = forms.EmailField(required=True, widget=forms.EmailInput(attrs={'placeholder': 'Email'}), label="Email")
+    phone = forms.CharField(required=True, widget=forms.TextInput(attrs={'placeholder': 'Phone'}), label="Phone")
     package = forms.ChoiceField(choices=Client.PACKAGE_OPTIONS, widget=forms.Select(attrs={'placeholder': 'Select your package...'}))
     request_date = forms.DateField(widget=forms.TextInput(attrs={'placeholder': 'Request Date', 'class': 'datepicker'}))
     

@@ -6,11 +6,13 @@ This application is a comprehensive platform designed for a wedding photographer
 
 ## Distinctiveness and Complexity
 
-The Wedding Photographer Website stands out with its multi-faceted approach, combining both a portfolio showcase for clients and a CRM system tailored specifically for the photographer. The inclusion of a dynamic calendar system, the ability to handle client bookings while cross-referencing available dates, as well as the CRM-style interface to manage and annotate client details, are evidences of the project's complexity and distinctiveness.
+The Wedding Photographer Website stands out from other projects in CS50's web development course; it's a holistic blend of creativity and functionality. One of the most striking features that sets this project apart is its dual nature. On the one hand, it serves as an portfolio platform, allowing clients to view the photographer's work. On the other, it cleverly integrates a CRM system, a tool typically found in business-oriented software. This CRM system isn't just for the sake of inclusion; it is meticulously tailored to cater to the needs of the photographer, enabling them to manage, record, and annotate intricate client details seamlessly.
+
+Building on the theme of distinctiveness, the dynamic calendar system embedded in the project stands out both in terms of design and utility. The calendar goes beyond date selection. It offers the photographer an intuitive interface to view appointments, block off specific dates, and ensure that their availability is communicated in real-time. Ensuring that blocked dates are not available for further booking on the client's booking form is not a mere aesthetic touch but a demonstration of forward-thinking design and user experience consideration. Additionally, admins have the ability to edit package details directly on the site, another example of UX considerations. 
+
+Furthermore, my pursuit of excellence didn't stop at what was taught in the course. I ventured beyond the curriculum by harnessing the power of additional tools and libraries. One example is the incorporation of django-widget-tweaks – an efficient tool to enhance the rendering of Django form fields. Another notable mention is full calendar, which played a pivotal role in realizing the dynamic calendar feature. By integrating these, I not only enhanced the project's functionality but also its distinctiveness, as it showcases a willingness to explore, learn, and implement external resources to achieve a refined product. Moreover, significant attention was paid to the site's aesthetic appeal. After a study of color theory, a meticulously chosen color palette was added to the CSS, ensuring that the visual experience is not only functional but also emotionally resonant with its audience.
 
 ## Files and Their Content
-
-### Project Structure
 
 - `main_directory/`: Contains the main Django project settings and configuration.
   - `app_name/`: Contains the application logic.
@@ -70,6 +72,11 @@ The Wedding Photographer Website stands out with its multi-faceted approach, com
 5. **Clients Page (Admin only)** ([View](/clients)): Acts as a CRM, listing all clients. Details of each client, including their requests, can be accessed and managed here.
 6. **Calendar Page (Admin only)** ([View](/calendar)): Displays all appointments and requests. Allows for the addition of new events, and any dates with events can't be booked by clients.
 
+## Requirements
+- Install the required packages:
+   ```bash
+   pip3 install markdown
+   pip3 install django-widget-tweaks
 
 ## Running the Application
 1. Clone the repository to your local machine.
@@ -82,6 +89,7 @@ The Wedding Photographer Website stands out with its multi-faceted approach, com
    ```bash
    python manage.py runserver
 5. Visit localhost:8000 in your browser to access the application.
+6. The admin page can be accessed using the login and password "CS50staff".
 
 ## Additional Information
 
